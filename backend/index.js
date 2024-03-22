@@ -10,9 +10,7 @@ app.use(express.json());
 app.use(cors());
 const url = process.env.URL;
 //database connection with mongodb
-mongoose.connect(
-  "mongodb+srv://arushi819:Aashi7009@cluster0.iyggjkj.mongodb.net/"
-);
+mongoose.connect(url);
 //API creation
 app.get("/", (req, res) => {
   res.send("Express App running");
